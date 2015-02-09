@@ -1,0 +1,164 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{John Smith}}
+
+5551 Summerlet Avenue\ \ \textbullet
+\ \ Wallah-Wallah, WA 55445
+\\
+(555) 555-5555\ \ \textbullet
+\ \ noreply@gmail.com
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Division Name, International Sprockets}}
+		{\textbf{Wallah-Wallah, WA}}
+	\\
+	\headerrow
+		{\emph{Grand Chief Poobah}}
+		{\emph{November 2004 -- Present}}
+	\begin{itemize*}
+        \item \emph{Recruited} as Assistant to the Associate Vice Grand Chief Poobah to provide operational assistance in all aspects of personal
+            and professional life of the Grand Chief Poobah. Assignments included: coordinate corporate cleaning sessions for all members of
+            the Grand Chief's Board of Apparel, act as personal liaison between Grand Chief and outside agents, maintain operational effectiveness
+            during morning supply shortages.
+        \item \emph{Promoted} to Grand Chief Poobah. Personally responsible for goings on of the Office of the Grand Chief. Saw to the fair and
+            equitable distribution of duties and morning supplies.
+            \\
+            \\
+            Projects include: Served as committee chair and lead author on recommendations to organizational structure of morning supplies warehouse 
+            (colloquially referred to as The Pantry). Collected and formatted information necessary for proper communications between clients and
+            engineers.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Intranational Sprockets}}
+		{\textbf{Wallah-Wallah, WA}}
+	\\
+	\headerrow
+		{\emph{Testing Assistant}}
+		{\emph{July 2000 -- November 2004}}
+	\begin{itemize*}
+        \item \emph{Recruited} to assist Quality Assurance with guaranteeing appropriate sprocket output.
+	\end{itemize*}
+
+\end{itemize}
+
+% This makes for a good place to force a pagebreak depending on your content and page flow.
+%\pagebreak
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+    \item
+    \headerrow
+        {\textbf{Frank's School of Sprockets}}
+        {\textbf{Wallah-Wallah, WA}}
+    \\ 
+    \headerrow 
+        {\emph{Department of Sprocket Design, B.S. in Sprockets}}
+		{\emph{Graduation: May 2000}}
+
+\end{itemize}
+
+
+% This makes for a good place to force a pagebreak depending on your content and page flow.
+%\pagebreak
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+    \item[Specialties:]
+        Design and construction of sprockets. Materials analysis.
+    \item[Languages:] 
+        English, Common, Aboleth, Klingon
+\end{description*}
+\end{indentsection}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Talks Given}
+
+\begin{itemize}
+    \parskip=0.1em
+
+    \item
+    \headerrow
+        {\textbf{Sprockets! 2012}}
+        {\textbf{October 2012}}
+    \\
+    \headerrow
+        {\emph{Management Essentials}}
+        {\emph{Methods, tools, and services managing a modern mobile sprocket workforce.}}
+
+    \item
+    \headerrow
+        {\textbf{League of Professional Gearsmiths Symposium 2011}}
+        {\textbf{May 2011}}
+    \\
+    \headerrow
+        {\emph{Analysis Techniques in Determining Drag Coefficients of Sprockets using Nano Materials}}
+
+\end{itemize}
+
+\end{document}
